@@ -1,0 +1,15 @@
+/home/atitkov/Documents/GB/gb_work/bin/Debug/net7.0/gb_work
+/home/atitkov/Documents/GB/gb_work/bin/Debug/net7.0/gb_work.deps.json
+/home/atitkov/Documents/GB/gb_work/bin/Debug/net7.0/gb_work.runtimeconfig.json
+/home/atitkov/Documents/GB/gb_work/bin/Debug/net7.0/gb_work.dll
+/home/atitkov/Documents/GB/gb_work/bin/Debug/net7.0/gb_work.pdb
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.csproj.AssemblyReference.cache
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.GeneratedMSBuildEditorConfig.editorconfig
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.AssemblyInfoInputs.cache
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.AssemblyInfo.cs
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.csproj.CoreCompileInputs.cache
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.dll
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/refint/gb_work.dll
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.pdb
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/gb_work.genruntimeconfig.cache
+/home/atitkov/Documents/GB/gb_work/obj/Debug/net7.0/ref/gb_work.dll

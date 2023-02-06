@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z3d3pvzptMC1J+bZ8GACKJ0HrP3mRUguEuWfW/akPpc9MN1LlJM8kvVaLtai3Mnr9FBFSUVNzvUpWFMqfRmCBw==",
+  "success": true,
+  "projectFilePath": "/home/atitkov/Documents/GB/gb_work/gb_work.csproj",
+  "expectedPackageFiles": [
+    "/home/atitkov/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.0/microsoft.aspnetcore.app.ref.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
