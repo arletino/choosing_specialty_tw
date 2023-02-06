@@ -1,25 +1,45 @@
 ﻿
 Console.Clear();
 Console.WriteLine("Курсовая работа");
-Console.Write("Введите данные для анализа, элементы разделяйте запятой - ");
-string inputString = Console.ReadLine();
+Console.Write(@"Введите данные элементы массива строк, для ввода элемента нажмите 
+'Enter', чтобы закончить ввод, в пустой строке нажмите 'Enter': ");
 Console.WriteLine();
-string [] inputArray = inputString.Split(',');
 
-string [] OutputArray(string [] array)
+string [] InputArray() // Method input Array by elements from console
+{
+    int count = 0;
+    string [] tempArray = new string[count];
+    string inputString = string.Empty;
+    do
+    {
+       inputString = Console.ReadLine();
+       if (inputString != string.Empty)
+            {
+                count ++;   
+                string [] temp = new string[count];
+                for (int i =0; i < count - 1; i++)             
+                    temp[i] = tempArray[i];
+                temp[count-1] = inputString;
+                tempArray = temp; 
+                }
+    } while (inputString != string.Empty);
+
+    return tempArray;
+}
+
+string [] OutputArray(string [] array) //Method for new Array with string elements less 4 chars
 {    
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = array[i].Trim();
 
-        if (array[i].Length < 3) count +=1;
+        if (array[i].Length < 4) count +=1;
     }
     string [] outputArray = new string[count];
     int j = 0;
-    foreach (string word in inputArray)
+    foreach (string word in array)
     {
-        if (word.Length < 3) 
+        if (word.Length < 4) 
         {
             outputArray[j] = word;
             j += 1;
@@ -28,31 +48,21 @@ string [] OutputArray(string [] array)
     return outputArray;
 }
 
-string [] SecondOutputArray(string [] array)
+void PrintArray(string [] array) // Output elements of Array
 {
-    string tempString = String.Empty;
+    Console.Write("[");
     foreach (var word in array)
-    {
-        if (word.Length < 3) 
-        {
-            tempString += word + ' ';
-        }
-    }
-    tempString = tempString.TrimEnd();
-    return tempString.Split();
+        Console.Write($"{word};"); 
+    Console.Write("]");
 }
 
-void PrintArray(string [] array)
-{
-    Console.Write("Массив с элементами менее 3-х знаков: ");
-    foreach (var word in array)
-    {
-    Console.Write($"{word}, "); 
-    }
+string [] inputArray = InputArray();
+Console.WriteLine("Заданный массив строк:");
+PrintArray(inputArray);
 
-}
+Console.WriteLine();
+
 string [] outputArray = OutputArray(inputArray); 
+Console.WriteLine("Полученный массив строк:");
 PrintArray(outputArray);
 Console.WriteLine();
-Console.WriteLine("Второй вариант решения");
-PrintArray(SecondOutputArray(inputArray));
