@@ -57,12 +57,23 @@ void PrintArray(string [] array) // Output elements of Array
 }
 
 string [] inputArray = InputArray();
-Console.WriteLine("Заданный массив строк:");
-PrintArray(inputArray);
 
-Console.WriteLine();
+if (inputArray.Length == 0)
+    Console.WriteLine("Вы ввели пустой массив");
+else 
+{ 
+    Console.WriteLine("Заданный массив строк:");
+    PrintArray(inputArray);
 
-string [] outputArray = OutputArray(inputArray); 
-Console.WriteLine("Полученный массив строк:");
-PrintArray(outputArray);
+    Console.WriteLine();
+    string [] outputArray = OutputArray(inputArray); 
+
+    if (outputArray.Length == 0)
+        Console.WriteLine("Полученный массив строк пустой");
+    else
+    {
+        Console.WriteLine("Полученный массив строк:");
+        PrintArray(outputArray);   
+    }
+}
 Console.WriteLine();
