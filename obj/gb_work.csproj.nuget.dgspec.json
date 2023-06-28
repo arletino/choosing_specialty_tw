@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/atitkov/Documents/GB/gb_work/gb_work.csproj": {}
+    "/home/atitkov/Documents/gb_dev/choosing_specialty_tw/gb_work.csproj": {}
   },
   "projects": {
-    "/home/atitkov/Documents/GB/gb_work/gb_work.csproj": {
+    "/home/atitkov/Documents/gb_dev/choosing_specialty_tw/gb_work.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/atitkov/Documents/GB/gb_work/gb_work.csproj",
+        "projectUniqueName": "/home/atitkov/Documents/gb_dev/choosing_specialty_tw/gb_work.csproj",
         "projectName": "gb_work",
-        "projectPath": "/home/atitkov/Documents/GB/gb_work/gb_work.csproj",
+        "projectPath": "/home/atitkov/Documents/gb_dev/choosing_specialty_tw/gb_work.csproj",
         "packagesPath": "/home/atitkov/.nuget/packages/",
-        "outputPath": "/home/atitkov/Documents/GB/gb_work/obj/",
+        "outputPath": "/home/atitkov/Documents/gb_dev/choosing_specialty_tw/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/atitkov/.nuget/NuGet/NuGet.Config"
@@ -48,18 +48,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.2, 7.0.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.107/RuntimeIdentifierGraph.json"
         }
       }
     }

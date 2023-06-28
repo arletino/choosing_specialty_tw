@@ -1,79 +1,60 @@
-﻿
-Console.Clear();
+﻿Console.Clear();
 Console.WriteLine("Курсовая работа");
-Console.Write(@"Введите данные элементы массива строк, для ввода элемента нажмите 
-'Enter', чтобы закончить ввод, в пустой строке нажмите 'Enter': ");
+string task = @"Введите  элементы массива строк через ' ',
+чтобы закончить ввод, нажмите 'Enter': ";
 Console.WriteLine();
 
-string [] InputArray() // Method input Array by elements from console
+Promt(main, task);
+
+void Promt(Delegate method, string? task)
 {
-    int count = 0;
-    string [] tempArray = new string[count];
-    string inputString = string.Empty;
-    do
+do
     {
-       inputString = Console.ReadLine();
-       if (inputString != string.Empty)
-            {
-                count ++;   
-                string [] temp = new string[count];
-                for (int i =0; i < count - 1; i++)             
-                    temp[i] = tempArray[i];
-                temp[count-1] = inputString;
-                tempArray = temp; 
-                }
-    } while (inputString != string.Empty);
+        Console.Clear();
+        Console.Write(task);
+        string? str = Console.ReadLine(); 
 
-    return tempArray;
-}
-
-string [] OutputArray(string [] array) //Method for new Array with string elements less 4 chars
-{    
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-
-        if (array[i].Length < 4) count +=1;
-    }
-    string [] outputArray = new string[count];
-    int j = 0;
-    foreach (string word in array)
-    {
-        if (word.Length < 4) 
+        if (str ==string.Empty || str.Trim() == string.Empty)
         {
-            outputArray[j] = word;
-            j += 1;
+            Console.WriteLine("Вы ввели не правильные данные, для выхода нажмите 'ESC'");
+            Console.WriteLine("Или любую клавишу для повтора");
         }
-    }
-    return outputArray;
+        else 
+        {
+            method.DynamicInvoke(str);
+             
+            Console.WriteLine("Для выхода нажмите 'ESC' или любую клавишу для повтора");
+        }    
+    } while (Console.ReadKey().Key != ConsoleKey.Escape);
 }
 
-void PrintArray(string [] array) // Output elements of Array
+string?[] GetArrayFromString(string? str) // Method get Array by words from string
 {
-    Console.Write("[");
-    foreach (var word in array)
-        Console.Write($"{word};"); 
-    Console.Write("]");
+    str.Trim();
+    return str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 }
 
-string [] inputArray = InputArray();
+void PrintArrayWords(string [] arrayWords) //print Array 
+{   
+    Console.Write('[' + string.Join("; ", arrayWords) + "]");
+}
 
-if (inputArray.Length == 0)
-    Console.WriteLine("Вы ввели пустой массив");
-else 
-{ 
-    Console.WriteLine("Заданный массив строк:");
-    PrintArray(inputArray);
-
-    Console.WriteLine();
-    string [] outputArray = OutputArray(inputArray); 
-
-    if (outputArray.Length == 0)
-        Console.WriteLine("Полученный массив строк пустой");
-    else
+string?[] GetArrayShortWords(string [] arrayWords) //Method for new Array with string elements less 4 chars
+{    
+    string? str = string.Empty;
+    foreach (string word in arrayWords)
     {
-        Console.WriteLine("Полученный массив строк:");
-        PrintArray(outputArray);   
+        if (word.Length < 4) str +=word + ' ';
     }
+    return GetArrayFromString(str);
 }
-Console.WriteLine();
+
+void main(string? str)
+{
+    Console.Write("Исходный массив слов: ");
+    PrintArrayWords(GetArrayFromString(str));
+    Console.WriteLine();
+    Console.WriteLine("Массив слов с кол-вом букв менее 4-х: ");
+    PrintArrayWords(GetArrayShortWords(GetArrayFromString(str)));
+    Console.WriteLine();
+}
