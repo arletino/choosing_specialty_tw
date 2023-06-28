@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 Console.WriteLine("Курсовая работа");
-string task = @"Введите  элементы массива строк через ' ',
+string task = @"Введите  элементы массива строк через пробел,
 чтобы закончить ввод, нажмите 'Enter': ";
 Console.WriteLine();
 
